@@ -13,10 +13,10 @@ a:focus-visible { outline: 3px solid #60aaff; outline-offset: 5px; }
 .shell { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
 header, footer { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; padding-block: 1.2rem; }
 header { border-bottom: 1px solid #ffffff24; }
-.brand { display: inline-flex; align-items: center; gap: .5rem; font-size: 1.3rem; font-weight: 850; letter-spacing: -.04em; text-decoration: none; }
-.brand img { border-radius: 50%; }
-.brand span { color: var(--coral); }
-nav { display: flex; gap: clamp(1rem, 3vw, 2.5rem); }
+.brand { display: block; flex: none; }
+.brand img { display: block; width: 110px; height: auto; border-radius: .35rem; }
+
+nav { display: flex; flex-wrap: wrap; gap: clamp(1rem, 3vw, 2.5rem); }
 nav a { text-decoration: none; }
 nav a:hover, footer a:hover { color: var(--coral); }
 .hero { display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: clamp(1.5rem, 5vw, 5rem); padding-block: clamp(3rem, 8vw, 7rem); }
@@ -45,3 +45,25 @@ footer { border-top: 1px solid #ffffff24; color: var(--muted); }
   .hero-image { max-width: 360px; width: 100%; justify-self: center; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.coaching { background: #12251d; }
+.coaching-inner { padding-block: clamp(3rem, 8vw, 6rem); }
+.coach-intro { display: grid; grid-template-columns: minmax(0, 360px) 1fr; gap: clamp(1.5rem, 6vw, 5rem); align-items: center; }
+.coach-intro img { display: block; width: 100%; height: auto; border-radius: .6rem; }
+.coach-intro p { max-width: 44ch; }
+.coach-intro .eyebrow, .credentials { color: #c1efa9; }
+.credentials { font-weight: 700; }
+.plans-heading { margin-block: clamp(2.5rem, 6vw, 4rem) 1.25rem; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.75rem), 1fr)); gap: .9rem; }
+.plan { padding: 1.1rem; background: #20382b; border: 1px solid #52725b; border-radius: .6rem; }
+.plan h4 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+.plan p { margin: .5rem 0; }
+.plan .price { color: #c1efa9; }
+.price strong { font-size: 1.9rem; }
+.plan ul { margin: .8rem 0 0; padding-left: 1.15rem; }
+.plan li + li { margin-top: .35rem; }
+.coaching-button { margin-top: 1.5rem; }
+@media (max-width: 700px) {
+  .coach-intro { grid-template-columns: 1fr; }
+  .coach-intro img { max-width: 340px; }
+}
