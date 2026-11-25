@@ -56,17 +56,20 @@ footer { border-top: 1px solid #ffffff24; color: var(--muted); }
 .coach-intro p { max-width: 44ch; }
 .coach-intro .eyebrow, .credentials { color: #c1efa9; }
 .credentials { font-weight: 700; }
-.plans-heading { margin-block: clamp(2.5rem, 6vw, 4rem) 1.25rem; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.plans-heading { max-width: none; margin-block: clamp(2.5rem, 6vw, 4rem) 1.25rem; font-size: clamp(1.6rem, 3vw, 2.3rem); }
+#welcome, #coaching { scroll-margin-block-start: 1.5rem; }
 .plans { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .9rem; }
-.plan { grid-column: span 2; padding: clamp(1.1rem, 2.3vw, 1.75rem); background: #20382b; border: 1px solid #52725b; border-radius: .6rem; }
-.plan h4 { margin: 0; font-size: 1.15rem; line-height: 1.2; }
+.plan { display: flex; flex-direction: column; grid-column: span 2; padding: clamp(1.1rem, 2.3vw, 1.75rem); background: #20382b; border: 1px solid #52725b; border-radius: .6rem; }
+.plan h3 { font-size: 1.15rem; line-height: 1.2; }
 .plan:nth-child(n + 4) { grid-column: span 3; }
 .plan p { margin: .5rem 0; color: #d1dfd3; }
 .plan .price { margin-block: .8rem; padding-bottom: .65rem; border-bottom: 1px solid #52725b; color: #c1efa9; }
 .price strong { font-size: 1.9rem; }
-.plan ul { margin: .8rem 0 0; padding-left: 1.15rem; }
+.plan ul { margin: .8rem 0 1.5rem; padding-left: 1.15rem; }
 .plan li + li { margin-top: .35rem; }
-.coaching-button { margin-top: 1.5rem; }
+.plan-text { margin-top: auto; background: #c1efa9; }
+.plan-text:hover { background: #d7f6c6; }
+.plan-contact { margin: 1.5rem 0 0; }
 @media (max-width: 700px) {
   .coach-intro { grid-template-columns: 1fr; }
   .coach-intro img { max-width: 340px; }
